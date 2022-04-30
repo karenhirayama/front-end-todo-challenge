@@ -27,7 +27,7 @@ export default function AllTodos() {
   return (
     <div className="max-w-7xl mx-auto">
       <div>
-        <h1 className="text-center font-bold text-[#00ABFB] mt-2">
+        <h1 className="text-center text-[#00ABFB] mt-2">
           List of Todos - all users
         </h1>
       </div>
@@ -36,7 +36,7 @@ export default function AllTodos() {
           : <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {todos.map((todo) => (
               <div key={todo.id} onClick={(e) => { showUserTodos(todo.userId) }}
-                className='box-border border-2 border-[#EFA0CB] hover:border-[#00006E] cursor-pointer p-2 flex flex-col justify-between'
+                className='box-border border-2 border-gray-400 hover:border-[#00006E] cursor-pointer p-2 flex flex-col justify-between'
               >
                 <div className="text-left">
                   <div>
