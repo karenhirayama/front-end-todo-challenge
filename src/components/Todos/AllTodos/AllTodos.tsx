@@ -43,7 +43,7 @@ export default function AllTodos() {
                     <div className="flex items-center justify-between">
                       <div>
                         <h4>
-                          User: {todo.userId}
+                          <span className="font-bold">User:</span> {todo.userId}
                         </h4>
                       </div>
                       {todo.completed ?
@@ -57,14 +57,14 @@ export default function AllTodos() {
                       }
                     </div>
                     <p>
-                      Task: {todo.title}
+                      <span className="font-bold">Task:</span> {todo.title}
                     </p>
                   </div>
                 </div>
                 <div>
                   <h5>
                     {todo.completed ?
-                      <div className="text-green-500 text-lg">
+                      <div className="text-green-700 text-lg">
                         <h1>
                           Complete
                         </h1>
