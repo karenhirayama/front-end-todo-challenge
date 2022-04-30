@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllTodos } from "../../ApiTodo/ApiTodo";
-
+import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 
 export default function AllTodos() {
   const [todos, setTodos] = useState<any[]>([]);
@@ -25,7 +25,7 @@ export default function AllTodos() {
   };
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <div>
         <h1 className="text-center font-bold text-[#00ABFB] mt-2">
           List of Todos - all users
@@ -36,32 +36,41 @@ export default function AllTodos() {
           : <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {todos.map((todo) => (
               <div key={todo.id} onClick={(e) => { showUserTodos(todo.userId) }}
-                className='box-border border-2 border-[#EFA0CB] cursor-pointer p-2'
+                className='box-border border-2 border-[#EFA0CB] hover:border-[#00006E] cursor-pointer p-2 flex flex-col justify-between'
               >
                 <div className="text-left">
                   <div>
-
-                    <h4>
-                      User: {todo.userId}
-                    </h4>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4>
+                          User: {todo.userId}
+                        </h4>
+                      </div>
+                      {todo.completed ?
+                        <div className="text-green-500 text-lg">
+                          <FaCheckCircle />
+                        </div>
+                        :
+                        <div className="text-orange-500 text-lg">
+                          <FaExclamationCircle />
+                        </div>
+                      }
+                    </div>
                     <p>
                       Task: {todo.title}
                     </p>
-                  </div>
-                  <div>
-                    {/* ICON */}
                   </div>
                 </div>
                 <div>
                   <h5>
                     {todo.completed ?
-                      <div>
+                      <div className="text-green-500 text-lg">
                         <h1>
                           Complete
                         </h1>
                       </div>
                       :
-                      <div>
+                      <div className="text-orange-500 text-lg">
                         <h1>
                           Incomplete
                         </h1>
