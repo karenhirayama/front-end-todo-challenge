@@ -102,7 +102,7 @@ export const UserTodos = () => {
                   <div className="flex ml-0 flex-row justify-around my-2">
                     <div className="flex items-center">
                       <span className={todo.completed ? 'text-green-700' : 'text-gray-300'}
-                        onClick={(e) => handleIsCompleted(todo.completed, todo.id)}
+                        onClick={(e) => handleIsCompleted(!todo.completed, todo.id)}
                       >
                         <FaCheckCircle />
                       </span>
@@ -110,7 +110,7 @@ export const UserTodos = () => {
                     </div>
                     <div className="flex items-center">
                       <span className={!todo.completed ? 'text-orange-500' : 'text-gray-300'}
-                        onClick={(e) => handleIsCompleted(todo.completed, todo.id)}
+                        onClick={(e) => handleIsCompleted(!todo.completed, todo.id)}
                       >
                         <FaExclamationCircle />
                       </span>
