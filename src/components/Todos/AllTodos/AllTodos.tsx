@@ -36,7 +36,7 @@ export default function AllTodos() {
           : <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {todos.map((todo) => (
               <div key={todo.id} onClick={(e) => { showUserTodos(todo.userId) }}
-                className='box-border border-2 border-gray-400 hover:border-[#00006E] cursor-pointer p-2 flex flex-col justify-between'
+                className='box-border border-2 border-gray-400 hover:border-[#00006E] rounded-md cursor-pointer p-2 flex flex-col justify-between'
               >
                 <div className="text-left">
                   <div>
@@ -47,7 +47,7 @@ export default function AllTodos() {
                         </h4>
                       </div>
                       {todo.completed ?
-                        <div className="text-green-500 text-lg">
+                        <div className="text-green-700 text-lg">
                           <FaCheckCircle />
                         </div>
                         :
