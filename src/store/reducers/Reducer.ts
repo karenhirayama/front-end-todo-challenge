@@ -11,11 +11,9 @@ const todosReducer = (state = initialState, action: any) => {
                 todos: [action.payload, ...state.todos]
             };
         case "TOGGLE_TODO":
-            console.log(action)
             return Object.assign({}, state, {
                 todos: state.todos.map((todo: any) => {
                     if (todo.id === action.payload) {
-                        console.log('oi')
                         return Object.assign({}, todo, {
                             completed: !todo.completed
                         })
