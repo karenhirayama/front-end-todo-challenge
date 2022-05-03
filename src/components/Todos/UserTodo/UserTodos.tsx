@@ -53,7 +53,7 @@ export const UserTodos = () => {
         </div>
         {isLoading ? <h1>Loading</h1>
           :
-          <div>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {userTodos.map((todo: any) => (
               <div key={todo.id}
                 className='box-border border-2 border-gray-400 rounded-md p-2 m-2 flex flex-col justify-between'
@@ -64,7 +64,7 @@ export const UserTodos = () => {
                   </p>
                 </div>
                 <div>
-                  <div className="flex ml-0 flex-row justify-around my-2">
+                  <div className="flex ml-0 flex-row justify-around my-2 md:text-[15px]">
                     <div className="flex items-center">
                       <span className={todo.completed ? 'text-green-700' : 'text-gray-300'}
                         onClick={(e) => handleChangeTodo(todo.completed, todo.id)}
@@ -73,7 +73,7 @@ export const UserTodos = () => {
                       </span>
                       <span className="ml-1">Completed</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center ml-2">
                       <span className={!todo.completed ? 'text-orange-500' : 'text-gray-300'}
                         onClick={(e) => handleChangeTodo(todo.completed, todo.id)}
                       >
