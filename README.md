@@ -30,6 +30,14 @@ Para você conseguir executar a aplicação é preciso ter npm ([Instalar npm](h
 
 Para executar a aplicação, use o comando a seguir no seu terminal:
 
+### `yarn install`
+
+Execute no terminal `yarn install` para instalar o `node-modules` contendo os arquivos que vão ajudar na construção da aplicação. 
+
+### `yarn start`
+
+Execute no terminal `yarn start` e quando a aplicação estiver rodando, acesse o link: [http://localhost:3000](http://localhost:3000).
+
 ### `yarn star`
 
 A aplicação será aberta no modo de desenvolvimento e uma janela no seu navegador será aberta no  [http://localhost:3000](http://localhost:3000) ou abra a aplicação com esse link.
